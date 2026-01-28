@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Appointment Booking</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<main id="appointmentFormContainer">
+			<h1 id="formTitle">Book an Appointment</h1>
+			<p id="formSubtitle">
+				Choose a service, date, and time that works for you.
+			</p>
+
+			<!-- Form Section -->
+			<form id="appointmentForm">
+				<!-- Section 1: Contact Info -->
+				<fieldset>
+					<legend>Contact Information</legend>
+
+					<label for="fullName" class="required"
+						>Full Name</label
+					>
+					<input
+						type="text"
+						id="fullName"
+						name="fullName"
+						placeholder="Your full name"
+					/>
+
+					<label for="email">Email</label>
+					<input
+						type="email"
+						id="email"
+						name="email"
+						placeholder="example@mail.com"
+					/>
+
+					<label for="phone" class="required">Phone</label>
+					<input
+						type="tel"
+						id="phone"
+						name="phone"
+						placeholder="1234567890"
+					/>
+
+					<div id="contactError" class="error-message"></div>
+				</fieldset>
+
+				<!-- Section 2: Service Details -->
+				<fieldset>
+					<legend>Service Details</legend>
+
+					<label for="serviceType" class="required"
+						>Service Type</label
+					>
+					<select id="categorySelect">
+						<option value="">Select Service Category</option>
+						<option value="doctor">Healthcare</option>
+						<option value="salon">Hair Care</option>
+						<option value="parlour">Beauty & Skin</option>
+						<option value="nails">Nail Care</option>
+						<option value="spa">Wellness</option>
+						<option value="therapy">Counseling</option>
+						<option value="fitness">Fitness</option>
+						<option value="homeServices">Home Care</option>
+						<option value="other">Miscellaneous</option>
+					</select>
+
+					<label for="subService" class="required"
+						>Preferred Sub-service</label
+					>
+					<select id="serviceSelect">
+						<option value="">Select Service</option>
+					</select>
+
+					<div id="serviceError" class="error-message"></div>
+				</fieldset>
+
+				<!-- Section 3: Date & Time -->
+				<fieldset>
+					<legend>Date & Time</legend>
+
+					<label for="appointmentDate" class="required"
+						>Appointment Date</label
+					>
+					<input type="date" id="appointmentDate" />
+
+					<label for="timeSlot" class="required"
+						>Select Time</label
+					>
+					<input type="time" id="timeSlot" />
+
+					<div id="timeError" class="error-message"></div>
+				</fieldset>
+
+				<!-- Section 4: Additional Info -->
+				<fieldset>
+					<legend>Additional Information</legend>
+
+					<label for="notes">Notes / Special Requests</label>
+					<textarea
+						id="notes"
+						placeholder="Any additional info"
+					></textarea>
+
+					<label>
+						<input type="checkbox" id="firstTime" /> First
+						Time Booking
+					</label>
+				</fieldset>
+
+				<!-- Section 5: Confirmation -->
+				<fieldset>
+					<label class="required">
+						<input type="checkbox" id="agree" /> I agree to
+						the terms and conditions.</label
+					>
+					<p id="agreementError"></p>
+				</fieldset>
+
+				<!-- Submit Button -->
+				<button type="submit" id="submitBtn">
+					Confirm Appointment
+				</button>
+			</form>
+		</main>
+
+		<script src="script.js"></script>
+	</body>
+</html>
