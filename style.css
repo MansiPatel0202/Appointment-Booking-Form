@@ -1,68 +1,73 @@
 /* Reset / Base */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family:
+		system-ui,
+		-apple-system,
+		BlinkMacSystemFont,
+		"Segoe UI",
+		sans-serif;
 }
 
 body {
-  background-color: #0b0d10;
-  color: #f2f3f5;
-  line-height: 1.5;
-  padding: 1rem;
+	background-color: #0b0d10;
+	color: #f2f3f5;
+	line-height: 1.5;
+	padding: 1rem;
 }
 
 /* Form Container */
 main#appointmentFormContainer {
-  max-width: 500px;
-  margin: 2rem auto;
-  background-color: #14161a;
-  border-radius: 12px;
-  padding: 1.75rem;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.85);
+	max-width: 500px;
+	margin: 2rem auto;
+	background-color: #14161a;
+	border-radius: 12px;
+	padding: 1.75rem;
+	box-shadow: 0 15px 40px rgba(0, 0, 0, 0.85);
 }
 
 /* Headings */
 h1#formTitle {
-  font-size: 1.85rem;
-  margin-bottom: 0.4rem;
-  color: #ffffff;
+	font-size: 1.85rem;
+	margin-bottom: 0.4rem;
+	color: #ffffff;
 }
 
 p#formSubtitle {
-  font-size: 0.95rem;
-  margin-bottom: 1.75rem;
-  color: #9aa0aa;
+	font-size: 0.95rem;
+	margin-bottom: 1.75rem;
+	color: #9aa0aa;
 }
 
 /* Fieldsets / Sections */
 fieldset {
-  border: 1px solid #2a2d33;
-  padding: 1.1rem;
-  border-radius: 10px;
-  margin-bottom: 1.5rem;
-  background-color: #111318;
+	border: 1px solid #2a2d33;
+	padding: 1.1rem;
+	border-radius: 10px;
+	margin-bottom: 1.5rem;
+	background-color: #111318;
 }
 
 legend {
-  padding: 0 0.6rem;
-  font-weight: 600;
-  color: #3dd6c6;
+	padding: 0 0.6rem;
+	font-weight: 600;
+	color: #3dd6c6;
 }
 
 /* Labels */
 label {
-  display: block;
-  margin-bottom: 0.3rem;
-  font-weight: 500;
-  color: #d7dbe2;
+	display: block;
+	margin-bottom: 0.3rem;
+	font-weight: 500;
+	color: #d7dbe2;
 }
 
 label.required::after {
-  content: "*";
-  color: rgb(235, 85, 21);
-  margin-left: 2px;
+	content: "*";
+	color: rgb(235, 85, 21);
+	margin-left: 2px;
 }
 
 /* Inputs / Select / Textarea / Time Picker */
@@ -73,128 +78,151 @@ input[type="date"],
 input[type="time"],
 select,
 textarea {
-  width: 100%;
-  padding: 0.65rem 0.7rem;
-  border-radius: 8px;
-  border: 1px solid #2a2d33;
-  background-color: #0f1114;
-  color: #f2f3f5;
-  font-size: 0.95rem;
-  margin-bottom: 0.9rem;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
-  cursor: text;
+	width: 100%;
+	padding: 0.65rem 0.7rem;
+	border-radius: 8px;
+	border: 1px solid #2a2d33;
+	background-color: #0f1114;
+	color: #f2f3f5;
+	font-size: 0.95rem;
+	margin-bottom: 0.9rem;
+	transition:
+		border-color 0.2s ease,
+		box-shadow 0.2s ease,
+		background-color 0.2s ease;
+	cursor: text;
 }
 
 /* Date & Time fix */
 input[type="date"],
 input[type="time"] {
-  z-index: 2;
-  pointer-events: auto;
-  cursor: text;
+	z-index: 2;
+	pointer-events: auto;
+	cursor: text;
 }
 
 /* Placeholder text */
 input::placeholder,
 textarea::placeholder {
-  color: #7c828d;
+	color: #7c828d;
 }
 
 input[type="date"]::-webkit-datetime-edit,
 input[type="time"]::-webkit-datetime-edit {
-  color: #f2f3f5;
+	color: #f2f3f5;
 }
 
 input[type="date"]::-moz-placeholder,
 input[type="time"]::-moz-placeholder {
-  color: #f2f3f5;
+	color: #f2f3f5;
 }
 
 input[type="date"]::-webkit-calendar-picker-indicator,
 input[type="time"]::-webkit-calendar-picker-indicator {
-  filter: invert(1) brightness(2);
-  cursor: pointer;
-  opacity: 0.85;
-  transition: opacity 0.15s ease;
+	filter: invert(1) brightness(2);
+	cursor: pointer;
+	opacity: 0.85;
+	transition: opacity 0.15s ease;
 }
 
 input[type="date"]:hover::-webkit-calendar-picker-indicator,
 input[type="time"]:hover::-webkit-calendar-picker-indicator {
-  opacity: 1;
+	opacity: 1;
 }
 
 /* Focus State */
 input:focus,
 select:focus,
 textarea:focus {
-  outline: none;
-  border-color: #3dd6c6;
-  box-shadow: 0 0 0 2px rgba(61, 214, 198, 0.25);
-  background-color: #12151a;
-  cursor: text;
+	outline: none;
+	border-color: #3dd6c6;
+	box-shadow: 0 0 0 2px rgba(61, 214, 198, 0.25);
+	background-color: #12151a;
+	cursor: text;
 }
 
 /* Disabled Inputs */
 input:disabled,
 select:disabled,
 textarea:disabled {
-  background-color: #181b21;
-  color: #7c828d;
-  cursor: not-allowed;
+	background-color: #181b21;
+	color: #7c828d;
+	cursor: not-allowed;
 }
 
 /* Checkbox */
 input[type="checkbox"] {
-  margin-right: 0.5rem;
-  accent-color: #3dd6c6;
+	margin-right: 0.5rem;
+	accent-color: #3dd6c6;
 }
 
 /* Buttons */
 button#submitBtn {
-  width: 100%;
-  padding: 0.9rem;
-  background: linear-gradient(135deg, #3dd6c6, #2fb3a6);
-  color: #0b0d10;
-  border: none;
-  border-radius: 10px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  box-shadow: 0 8px 25px rgba(61, 214, 198, 0.35);
-  transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+	width: 100%;
+	padding: 0.9rem;
+	background: linear-gradient(135deg, #3dd6c6, #2fb3a6);
+	color: #0b0d10;
+	border: none;
+	border-radius: 10px;
+	font-size: 1rem;
+	font-weight: 600;
+	cursor: pointer;
+	box-shadow: 0 8px 25px rgba(61, 214, 198, 0.35);
+	transition:
+		transform 0.15s ease,
+		box-shadow 0.15s ease,
+		opacity 0.15s ease;
 }
 
 button#submitBtn:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 12px 32px rgba(61, 214, 198, 0.5);
+	transform: translateY(-1px);
+	box-shadow: 0 12px 32px rgba(61, 214, 198, 0.5);
 }
 
 button#submitBtn:disabled {
-  background: #2a2d33;
-  color: #8b9099;
-  cursor: not-allowed;
-  box-shadow: none;
-  transform: none;
-  opacity: 0.8;
+	background: #2a2d33;
+	color: #8b9099;
+	cursor: not-allowed;
+	box-shadow: none;
+	transform: none;
+	opacity: 0.8;
 }
 
 /* Error & Status Messages */
 .error-message {
-  color: #f07b7b;
-  font-size: 0.85rem;
-  margin-top: -0.4rem;
-  margin-bottom: 0.75rem;
+	color: #f07b7b;
+	font-size: 0.85rem;
+	margin-top: -0.4rem;
+	margin-bottom: 0.75rem;
 }
 
-#formMessage {
-  text-align: center;
-  margin-top: 1rem;
-  font-weight: 600;
-  color: #f0b35c;
+#toast {
+	position: fixed;
+	top: 30px;
+	right: 50px;
+	background-color: #1cca5e;
+	color: #fff;
+	font-size: 18px;
+	font-weight: 600;
+	padding: 12px 20px;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	opacity: 0;
+	transition:
+		opacity 0.4s ease,
+		transform 0.4s ease;
+	transform: translateY(-10px);
+	z-index: 1000;
+}
+
+#toast.show {
+	opacity: 1;
+	transform: translateY(0);
 }
 
 /* Responsive */
 @media (min-width: 600px) {
-  main#appointmentFormContainer {
-    padding: 2.2rem;
-  }
+	main#appointmentFormContainer {
+		padding: 2.2rem;
+	}
 }

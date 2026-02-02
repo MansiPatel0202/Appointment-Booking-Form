@@ -24,8 +24,9 @@ const firstTimeCheckbox = document.querySelector("#firstTime");
 const agreeCheckbox = document.querySelector("#agree");
 const agreementError = document.querySelector("#agreementError");
 
-// Submit Button
+// Submit Button & Toaster
 const submitBtn = document.querySelector("#submitBtn");
+const toast = document.querySelector("#toast");
 
 // Full Form
 const form = document.querySelector("#appointmentForm");
@@ -152,7 +153,7 @@ form.addEventListener("submit", (e) => {
 	e.preventDefault();
 	let isValid = true;
 
-	// Clear previous error messanges
+	// Clear previous error messages
 	contactError.textContent = "";
 	serviceError.textContent = "";
 	timeError.textContent = "";
@@ -230,6 +231,26 @@ form.addEventListener("submit", (e) => {
 		return;
 	}
 
-	alert("Form submitted successfully!");
-	form.reset();
+	// alert("Form submitted successfully!");
+	showToast("Submitted Successfully.");
+	resetForm();
 });
+
+function showToast(message) {
+	toast.textContent = message;
+	toast.classList.add("show");
+	setTimeout(() => {
+		toast.classList.remove("show");
+	}, 3000);
+}
+
+function resetForm() {
+	form.reset();
+
+	// Reset sub-service dropdown
+	serviceSelect.innerHTML = `<option value="">Select Service</option>`;
+	serviceSelect.disabled = true;
+
+	// Scroll to top
+	window.scrollTo({ top: 0, behavior: "smooth" });
+}
